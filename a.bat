@@ -5,6 +5,16 @@ cd %pathMSBuild%
 
 set mypath=%~dp0
 set repo=Hello\
+set origin=https://github.com/GuzelGarifullina/Batch_file.git
+
+
+if exist logHistory.txt (
+  echo. >> logHistory.txt
+  echo. >> logHistory.txt
+)
+echo "New pull" >>  logHistory.txt
+
+git.exe pull %origin% master >> logHistory.txt
 
 set res=1
 if exist "%mypath%%repo%bin" (

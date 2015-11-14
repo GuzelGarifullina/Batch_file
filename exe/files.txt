@@ -1,0 +1,15 @@
+ConsoleTest\bin\Debug\ClassLibrary1.dll
+ConsoleTest\bin\Debug\ClassLibrary1.pdb
+ConsoleTest\bin\Debug\ConsoleApplication1.exe
+ConsoleTest\bin\Debug\ConsoleApplication1.pdb
+ConsoleTest\obj\Debug\ConsoleApplication1.pdb
+GUI\obj\Debug\GUI.Form1.resources
+GUI\obj\Debug\GUI.pdb
+GUI\bin\Debug\ClassLibrary1.dll
+GUI\bin\Debug\ClassLibrary1.pdb
+GUI\bin\Debug\GUI.exe
+GUI\bin\Debug\GUI.pdb
+OurLib\bin\Debug\ClassLibrary1.dll
+OurLib\bin\Debug\ClassLibrary1.pdb
+OurLib\obj\Debug\ClassLibrary1.dll
+OurLib\obj\Debug\ClassLibrary1.pdb

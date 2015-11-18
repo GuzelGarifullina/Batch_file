@@ -1,23 +1,27 @@
-@echo off
+@echo on
 
 call settings.bat 1
 set STATUS=succesfull
-:: call get.bat 1
-set GET_OK=1
+call get.bat 1
 if %GET_OK%==0 (
-  echo Can't clone remote
-  echo Please try again
+  echo Can't ^ clone ^ remote > %MESSAGE%
+  type  %GITLOG% >> %MESSAGE%
+  echo Please ^ try  ^ again >> %MESSAGE%
+  type %MESSAGE%
+
+  set STATUS=failed
+  call sender.bat 1
   GOTO EOF
 )
 call build.bat 1
 if %BUILD_OK%==0 (
-  echo Error in build
+  echo Error ^ in ^ build
   type %MSBUILDLOG%
-  set STATUS=failed
-
-  echo Error in build > %MESSAGE%
+  
+  echo Error ^ in ^ build > %MESSAGE%
   type %MSBUILDLOG% >> %MESSAGE%
-  call sender.bat  1
+  set STATUS=failed
+  call sender.bat 1
   GOTO EOF
 )
 call check.bat 1
@@ -40,11 +44,10 @@ if %TEST_OK%==0 (
   type %MSTESTLOG% >> %MESSAGE%
   set STATUS=failed
   call sender.bat 1
-  pause
   GOTO EOF
 )
 echo Everything ^ OK ^ %DATE% ^ %TIME% > %MESSAGE%
 call sender.bat 1
-del %MESSAGE%
 :EOF
+del %MESSAGE%
 pause

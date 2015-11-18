@@ -6,12 +6,12 @@ if "%1"=="" (
 cd %REPOFOLDER%
 if exist %SOLUTIONFOLDER% RMDIR /S  %SOLUTIONFOLDER%
 
-git clone %origin%  > %GITLOG%
-if exist master\ MOVE master Geometric-task
-cd %BUILDERFOLDER%
+git clone %origin%  > %GITLOG% 2>&1
 if ERRORLEVEL 1 (
   set GET_OK=0
 ) else (
   set GET_OK=1
 )
+if exist master\ MOVE master Geometric-task
+cd %BUILDERFOLDER%
 :EOF

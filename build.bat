@@ -1,7 +1,7 @@
 if "%1"=="" (
   echo Please execute main!
   pause
-  GOTO EOF
+  GOTO :EOF
 )
 %MSBUILD% "%SOLUTIONFILE%" >%MSBUILDLOG%
 if ERRORLEVEL 1 (
@@ -9,5 +9,3 @@ if ERRORLEVEL 1 (
 ) else (
   set BUILD_OK=1
 )
-
-:EOF

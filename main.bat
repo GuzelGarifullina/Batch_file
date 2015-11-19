@@ -22,6 +22,7 @@ if %BUILD_OK%==0 (
   type %MSBUILDLOG% >> %MESSAGE%
   set STATUS=failed
   call sender.bat 1
+  :: I need EOF , because all branches has common ending 
   GOTO EOF
 )
 call check.bat 1

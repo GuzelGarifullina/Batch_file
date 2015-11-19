@@ -1,7 +1,7 @@
 if "%1"=="" (
   echo Please execute main!
   pause
-  GOTO EOF
+  GOTO :EOF
 )
 :: Custom project settings
 set REPOFOLDER=C:\Users\Guzel\Desktop\lol\
@@ -27,5 +27,3 @@ set TESTFILE=%SOLUTIONFOLDER%UnitTestProject1\bin\Debug\UnitTestProject1.dll
 set MSTESTLOG=%BUILDERFOLDER%mstest.log
 set LOSTFILELOG=%BUILDERFOLDER%lostfile.log
 set MESSAGE=%BUILDERFOLDER%file.txt
-
-:EOF

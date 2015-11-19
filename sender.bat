@@ -1,7 +1,7 @@
 if "%1"=="" (
   echo Please execute main!
   pause
-  GOTO EOF
+  GOTO :EOF
 )
 set SUBJECT="Build  %STATUS%"
 mailsend -to %GETTER% -from %SENDER% -ssl -port 465 -auth -smtp smtp.mail.ru ^
@@ -11,4 +11,4 @@ if ERRORLEVEL 1 (
 ) else (
   set SEND_OK=1
 )
-:EOF
+

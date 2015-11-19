@@ -1,7 +1,7 @@
 if "%1"=="" (
   echo Please execute main!
   pause
-  GOTO EOF
+  GOTO :EOF
 )
 %MSTest% /testcontainer:"%TESTFILE%" >%MSTESTLOG%
 
@@ -12,4 +12,3 @@ if ERRORLEVEL 1 (
 )
 
 if exist %BUILDERFOLDER%TestResults  RMDIR /S %BUILDERFOLDER%TestResults
-:EOF

@@ -1,7 +1,7 @@
 if "%1"=="" (
   echo Please execute main!
   pause
-  GOTO EOF
+  GOTO :EOF
 )
 cd %REPOFOLDER%
 if exist %SOLUTIONFOLDER% RMDIR /S  %SOLUTIONFOLDER%
@@ -14,4 +14,3 @@ if ERRORLEVEL 1 (
 )
 if exist master\ MOVE master Geometric-task
 cd %BUILDERFOLDER%
-:EOF
